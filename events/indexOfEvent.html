@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Events in Javascript
+        </title>
+        <body>
+        <div align="CENTER">
+            <button   id="press">
+                Click me
+            </button>
+            
+            <div id="out">
+
+            </div>
+            <button  id="hoverme">
+                Come See Magic
+            </button>    
+            <input type="text" id="in"></input>
+            <p id="do"></p>
+            <input type="text" id="in2"></input>
+            <p id="res"></p>
+            <form onsubmit="validate()">
+                <input type="text" id="name" placeholder="enter name"><p>
+                    <input  type="text" id="email" placeholder="enter email">
+                    <input type="submit" value="submit" placeholder="SUBMIT"></p>
+            </form>
+    
+        </div>
+
+    <script>
+        const i= document.getElementById("in2");
+        const o=document.getElementById("res");
+        i.onchange= function()
+        {
+            o.textContent=`value changed to :${i.value}`;
+        }
+    </script>
+            <script >
+                const inp =document.getElementById("in");
+                const k= document.getElementById("do");
+                inp.onkeydown=function(event)
+                {
+                    k.textContent=`${event.key}`;
+    
+                };
+            </script>
+            
+
+<script src="./events.js"> </script>
+<script src="./EventListener.js"></script>
+
+        </body>
+    </head>
+</html> 

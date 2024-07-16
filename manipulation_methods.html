@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body >
+        <p class="high">      i am line one      </p>
+        <p class="high">      i am line two     </p>
+        <p class="high">      i am line three      </p>
+        <p class="high">      i am line four    </p>
+       <div>Car sevak</div>
+       <div>Car sevak</div>
+       <div>Car sevak</div>
+       <div>Car sevak</div>
+       <div>Car sevak</div>
+       <div>Car sevak</div>
+        <img id="image"src="D:\HP\Documents\spotifyClone\spotifyClone\images\background.jpg" onclick="change()">
+        <img id="image2"src="C:\Users\HP\Pictures\7eqmxbodybcder.png">
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        </ul>
+        <div class="container">
+            <p>first para</p>
+            <p>second para</p>
+            <p>third para</p>
+
+        </div>
+        <h2>Heading 2</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+    <script>
+        const paragraphElements = document.getElementsByTagName('p');
+        alert(paragraphElements[1]);
+  </script>
+    </body>
+    <script>
+
+const container=document.getElementById('container');
+const second=container.querySelector('p:nth-child(1)');
+container.insertBefore(second,container.querySelector('p'));
+
+        const arr=document.getElementsByClassName('high');
+    for (let index = 0; index < arr.length; index++) {
+       arr[index].textContent+='this is completed ';
+    }
+     const c=document.getElementsByTagName('div');
+     for (let index = 0; index < c.length; index++) {
+        if(index%2==0)
+           { c[index].textContent='bar sevak';}
+        
+     }
+
+  const image2=document.getElementById('image2');
+  image2.addEventListener("click",change());
+  function change()
+    {
+    image.setAttribute("src","C:/Users/HP/Pictures/b7yjcljo.png");
+    };   
+    debugger;   
+    const list=document.getElementById('list');
+    const nwite=document.createElement('li');
+    nwite.textContent="5";
+    list.appendChild(nwite);
+    </script>
+</html>
