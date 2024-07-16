@@ -20,5 +20,6 @@ function show()
     };
     show();
     console.log(ne);
+    
 }
 ;
