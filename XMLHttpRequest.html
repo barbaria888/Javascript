@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <button id="loadusers">Load Users</button>
+            <div id="users"></div>
+            <script>
+                    document.getElementById('loadusers').addEventListener('click',function()
+                {
+                    var xhr =new XMLHttpRequest();
+                    xhr.open('GET',"https://jsonplaceholder.typicode.com/users",true);
+                    xhr.onload=function(){
+                        if(xhr.status>=20 && xhr.status<40){
+                            var users=JSON.parse(xhr.responseText);
+                            displayUsers(users);
+                        }
+                        else{
+                            console.error('network error');
+                        xhr.onerror=function(){
+                            console.error('network error');
+                        };
+xhr.send();
+                        }
+                    }
+                    function displayUsers()
+                    {
+                        var userlist=document.getElementById('users');
+                        userlist.innerHTML=`<h2>User List</h2>`;
+                        var ul=document.createElement('ul');
+                        users.forEach(function(user)  {
+                            var li=document.createElement('li');
+                            li.textContent=user.name;
+                            ul.appendChild(li);
+                        });
+                    userlist.appendChild('ul');}
+                });
+            </script>
+    </body>
+</html>
